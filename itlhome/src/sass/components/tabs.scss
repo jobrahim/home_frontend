@@ -1,0 +1,101 @@
+.tabs {
+	&.tabs-small {
+		.tabs-heading a {
+		    padding: 13px 7px;
+		    min-width: 115px;
+		    font-size: 1em;
+		}
+	}
+
+	.tabs-heading {
+    	margin-bottom: 12px;
+
+	    ul {
+	    	font-size: 0;
+	    	display: flex;
+		    overflow-x: auto;
+		    overflow-y: hidden;
+	    }
+
+		li {
+			display: inline-block;
+    		vertical-align: bottom;
+    		margin-right: 16px;
+		    position: relative;
+		    top: 0px;
+
+			&.disabled {
+				a {
+					cursor: not-allowed;	
+				}
+			}
+			&.selected {
+		    	z-index: 9999999;
+
+				a {
+					cursor: default;
+    				font-family: $bold-font;
+					font-weight: 500;
+					color: $primary-dark;
+					position: relative;
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 3px;
+						left: 0;
+						width: 100%;
+						height: 2px;
+						background: $primary-dark;
+					}
+				}
+			}
+
+			&.completed {
+				a {
+					color: $success-color;
+				}
+			}
+
+			&.new-tab-btn a {
+		    	margin-top: 8px;
+			    font-size: 1.3em;
+		    	padding: 5px 6px;
+		    	width: 30px;
+			    line-height: 0.7em;
+			    border: 1px solid $secondary-color;
+			    border-radius: 50%;
+
+			    i.icon {
+    				font-size: 0.6em;
+				    position: relative;
+				    left: 0.5px;
+			    }
+			}
+		}
+
+		a {
+			color: $text-color-dark;
+			cursor: pointer;
+			border-right: 0;
+			display: block;
+			padding: 14px;
+		    text-align: center;
+    		font-size: 1em;
+    		text-align: center;
+		}
+	}
+
+}
+
+@media screen and (max-width: $small-size) {
+	.tabs .tabs-heading {
+		li {
+			margin-right: 2px;
+		}
+		a {
+    		padding: 12px;
+		}
+	}
+}

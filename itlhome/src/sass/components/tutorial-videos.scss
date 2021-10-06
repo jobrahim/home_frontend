@@ -1,0 +1,66 @@
+.tutorial-videos {
+	ul {
+		list-style: none;
+	}
+
+	li {
+    	border-top: 1px solid $border-color;
+    	border-left: 4px solid $neutral-color;
+    	transition: all 0.3s;
+
+    	&:first-of-type {
+    		border-top: none;
+    	}
+
+    	&.selected {
+    		border-left: 4px solid $secondary-color;
+
+    		a {
+    			background-color: $primary-light;
+    			color: $primary-color;
+    		}
+    	}
+
+		a {
+			display: block;
+	    	padding: 12px 8px;
+			text-decoration: none;	
+    		transition: all 0.3s;
+		}
+	}
+
+
+	.video {
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: $small-size) {
+    .tutorial-videos {
+        ul {
+            border-top: 1px solid $border-color;
+            margin-bottom: 16px;
+
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+
+        li {
+            width: 50%;
+            float: left;
+            border-top: none;
+            border-bottom: 1px solid $border-color;
+
+            &:first-of-type {
+            }
+        }
+
+        .video {
+            height: 200px;
+        }
+    } 
+}

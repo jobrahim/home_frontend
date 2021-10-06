@@ -1,0 +1,84 @@
+.card {
+	.dot-dropdown {
+	    top: 7px;
+	    right: 7px;
+	}	
+}
+
+.dot-dropdown {
+    position: absolute;
+    top: -4px;
+    right: 0;
+
+    &.hover {
+    	.dot-icon {
+			background: $light-hover-color;
+			z-index: 99;
+
+		    .icon {
+			    color: $text-color;
+		    }
+    	}
+    }
+
+	.dot-icon {
+	    cursor: pointer;
+	    padding: 6px;
+	    width: 30px;
+	    text-align: center;
+	    border-radius: 50%;
+	    position: relative;
+	    z-index: 9;
+	    transition: all 0.3s;
+
+	    .icon { 	
+	    	transition: all 0.3s;
+		    position: relative;
+		    top: 1px;
+		    color: $text-color-light;
+	    }
+	}
+
+	.dot-dropdown-actions {
+		position: absolute;
+		right: 0;
+		top: 100%;
+		padding-top: 8px;
+		padding-right: 8px;
+		z-index: 999;
+
+		.dot-dropdown-actions-inside {
+			background: $neutral-color;
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+    		overflow: hidden;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		li {
+			a {
+				display: inline-block;
+				text-decoration: none;
+				padding: 8px;
+				min-width: 180px;
+				width: 100%;
+				transition: all 0.3s;
+
+				&:hover {
+					background: $primary-color;
+					color: $neutral-color
+				}
+			}
+
+			.action-danger {
+				&:hover {
+					background: $danger-color;
+				}
+			}
+		}
+	}
+
+}

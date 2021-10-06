@@ -1,0 +1,141 @@
+.add-service {
+
+	.add-service-table-scroll {
+		overflow: auto;
+
+	}
+
+	.add-service-button {
+		display: block;
+		background-color: $bg-color;
+		position: absolute;
+	    right: -16px;
+	    top: 0;
+    	width: 120px;
+	    height: 100px;
+	    box-shadow: 0px 0px 15px 1px #e1e5ff;
+	    padding: 24px 16px;
+	    cursor: pointer;
+	    z-index: 9;
+	    overflow: hidden;
+	    transition: all 0.3s;
+    	transform: translateX(60px);
+
+	    .icon-plus {
+	    	background: $primary-color;
+	    	color: $neutral-color;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			font-size: 11px;
+			display: block;
+			text-align: center;
+			padding: 5px 0px;
+			position: absolute;
+			top: 50%;
+    		left: 20px;
+			margin-top: -10px;
+	    }
+
+	    .btn-text {
+	    	font-family: $bold-font;
+	    	display: inline-block;
+	    	width: 100%;
+	    	text-align: center;
+	    	color: $primary-color;
+	    	text-transform: uppercase;
+			line-height: 1.15em;
+			font-size: 0.9em;
+
+			.icon {
+	    		color: $primary-color;
+				font-size: 1.5em;
+				display: inline-block;
+				margin-top: 4px;
+			}
+	    }
+
+	    &:hover {
+    		transform: translateX(0px);
+	    }
+	}
+
+	.add-service-button-mobile {
+		display: inline-block;
+		background-color: $bg-color;
+	    box-shadow: 0px 0px 15px 1px #e1e5ff;
+	    padding: 24px 16px;
+	    cursor: pointer;
+	    z-index: 9;
+	    transition: all 0.3s;
+	}
+
+	.add-service-table-header {
+		border-bottom: 1px solid $border-color;
+
+		span {
+		}
+	}
+
+	.modal .modal-box {
+    	max-height: 770px;
+
+		.box-content {
+    		padding: 0px 8px 0px;
+		}
+	}
+
+	.control-label{
+		text-align: center;
+    	line-height: 1.2em;
+	}
+
+	.card {
+    	padding: 20px 12px;
+    	padding-left: 48px;
+    	margin: 8px 0px;
+    	min-height: 0;
+
+    	&:first-of-type {
+    		margin-top: 24px;
+    	}
+    	&:last-of-type {
+    		margin-bottom: 24px;
+    	}
+
+    	.action-icon {
+		    top: 12px;
+    		left: 8px;
+			width: 30px;
+			height: 30px;
+			padding: 7px;
+
+    		i.icon {
+    			font-size: 1.1em;
+    		}
+    	}
+
+		span {
+		    text-align: left;
+		    display: inline-block;
+    		width: 100%;
+    		font-size: 0.9em;
+    		line-height: 1.2em;
+		}
+
+		.no-tracking {
+		    color: $text-color-dark;
+		    display: block;
+		    margin-top: 4px;
+		    font-size: 0.8em;
+    		font-style: italic;
+		}
+	}
+}
+
+
+@media screen and (max-width: $small-size) {
+	.add-service .card {
+    	padding-left: 12px;
+	}
+}

@@ -1,0 +1,134 @@
+.box {
+	background-color: $neutral-color;
+	border-radius: 3px;
+    box-shadow: 0px 0px 15px 1px #e1e5ff;
+    padding: 24px 16px;
+    overflow: hidden;
+
+    &.condensable {
+    	.slide-up-down-container {
+    		overflow: hidden;
+    	}
+
+    	header {
+    		margin-bottom: 0px !important;
+    	}
+    }
+
+    &.little-box {
+    	min-height: 220px;
+    	p {
+    		line-height: 1.5em;
+    	}
+    }
+
+	&.box-form {
+		padding-right: 20%;
+	}
+
+    .box {
+	    margin-left: 0;
+	    margin-right: 0;
+     	margin-top: 16px;
+     	padding: 8px;
+     	padding-top: 24px;
+	}
+
+
+	.box-title {
+		color: $text-color-light;
+	    text-transform: uppercase;
+	    font-size: 0.9em;
+	    letter-spacing: 0.05em;
+    	margin-bottom: 8px;
+    	padding-right: 32px;
+	}
+
+	&.little-header{
+		padding: 16px;
+		.box-header{
+		}
+	}
+
+	.close-btn {
+	    position: absolute;
+	    right: 8px;
+	    top: 8px;
+	    cursor: pointer;
+	    display: block;
+	    width: 40px;
+	    height: 40px;
+	    overflow: hidden;
+	    padding: 8px 0px;
+	    z-index: 99999;
+	    text-align: center;
+
+	    i {
+    		font-size: 1.4em;
+	    	color: $text-color-light;
+	    	transition: all 0.3s;
+	    }
+	    &:hover {
+	    	i {
+		    	color: $text-color;
+		    }
+	    }
+	}
+
+	.box-header {
+		position: relative;
+    	margin-bottom: 16px;
+
+		h2 {
+			display: inline-block;
+		}
+		
+		.header-icon {
+			position: absolute;
+			right: 0;
+			top: 50%;
+		    font-size: 1em;
+		    padding: 16px;
+    		margin: -16px;
+    		margin-top: -24px;
+		    line-height: 0.7em;
+		    color: $text-color;
+		    cursor: pointer;
+		}
+
+		.dot-dropdown {
+			top: -7px;
+		}
+
+		.box-header-sub-text {
+			position: absolute;
+			right: 40px;
+			top: 0;
+
+			.btn {
+				position: relative;
+				top: -8px;
+			}
+		}
+
+	}
+
+	.box-footer {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+}
+
+@media screen and (max-width: $medium-size) {
+	.box.box-form {
+		padding-right: 16px;
+	}
+}
+		
+
+@media screen and (max-width: $small-size) {
+
+	.box.little-box {
+    	min-height: 0px;
+    }
+}

@@ -1,0 +1,69 @@
+.avatar-box {
+	padding: 0px 24px;
+	padding-left: 64px;
+	position: relative;
+
+	&.hide-default {
+    	padding: 0px;
+	}
+
+	.avatar {
+		position: absolute;
+		top: 0px;
+		left: 8px;
+	}
+
+	.avatar-name {
+		font-weight: 500;
+    	font-family: $bold-font;
+		color: $text-color;
+	    margin-bottom: 4px;
+	    display: inline-block;
+	}
+	.avatar-sub-text {
+		color: $text-color-light;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    display: inline-block;
+    	width: 100%;
+	}
+
+	&.no-subtext {
+		.avatar-sub-text {
+    		margin-top: 16px;
+		}
+	}
+}
+
+.avatar {
+	width: 48px;
+	height: 48px;
+
+	&.small {
+		width: 32px;
+		height: 32px;
+    	vertical-align: middle;
+	}
+	&.big {
+		width: 130px;
+		height: 130px;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.avatar-round {
+	border-radius: 24px;
+	overflow: hidden;
+	&.big {
+		border-radius: 65px;
+	}
+}
+
+.avatar-square {
+	border-radius: 5px;
+	overflow: hidden;
+}

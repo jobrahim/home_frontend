@@ -1,0 +1,40 @@
+.pagination {
+	width: 100%;
+    padding: 15px;
+    text-align: center;
+	letter-spacing: -20px;
+	margin-top: 15px;
+    li {
+    	letter-spacing: initial;
+	    list-style-type: none;
+	    display: inline-block;
+	    border: 1px solid #ddd;
+	    border-left: 0px;
+	    &:first-of-type {
+	    	border: 1px solid #ddd;
+	    	border-radius: 5px 0px 0px 5px;
+	    }
+	    &:last-of-type {
+	    	border-radius: 0px 5px 5px 0px;
+	    }
+	    a {
+    		font-size: 0.8em;
+		    text-decoration: none;
+	    	padding: 8px 16px;
+    		display: block;
+    		transition: all 0.3s;
+    		&:hover{
+    			color: #fff;
+    			background-color: $primary-dark;
+    		}
+		}
+
+		&.active {
+			background-color: $primary-color;
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+}

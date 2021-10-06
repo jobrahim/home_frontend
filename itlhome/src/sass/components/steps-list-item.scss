@@ -1,0 +1,144 @@
+.steps-list-item {
+	position: relative;
+
+	.item-header {
+		position: relative;
+		padding: 12px 0px;
+		cursor: pointer;
+		padding-left: 64px;
+	}
+
+	.header-icon {
+		position: absolute;
+	    top: 24px;
+	    left: 15px;
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+	    text-align: center;
+	    padding-top: 6px;
+	    z-index: 99;
+		border: 2px solid $text-color-light;
+
+		.dot {
+		    border: 2px solid $neutral-color;
+			position: absolute;
+		    top: -1px;
+		    right: -1px;
+		    z-index: 99;
+		    width: 8px;
+		    height: 8px;
+		    border-radius: 4px;
+		}
+
+	    &.active {
+			width: 30px;
+			height: 30px;
+	    	border: 2px solid $success-color;
+			background-color: $light-hover-color;
+
+		    i.icon {
+				color: $primary-color;
+			    position: relative;
+			    top: -1px;
+		    }
+
+			.dot {
+				background: $primary-color;
+			}
+	    }
+
+	    &.finished {
+			background-color: $success-light;
+			border-color: $success-color;
+
+		    i.icon {
+				color: $success-color;
+		    }
+	    }
+
+	    &.color-danger {
+			background-color: $danger-light;
+			border-color: $danger-color;
+
+		    i.icon {
+				color: $danger-color;
+		    }
+
+			.dot {
+				background: $danger-color;
+			}
+	    }
+
+	    &.color-gray {
+			background-color: $light-hover-color;
+		    i.icon {
+				color: $text-color-light;
+		    }
+	    }
+	}
+
+	.status {
+		text-transform: uppercase;
+	    font-size: 0.8em;
+	    letter-spacing: 1px;
+	    font-weight: 500;
+    	font-family: $bold-font;
+    	display: block;
+    	margin-bottom: 8px;
+	}
+	.name {
+		display: inline-block;
+		font-weight: 400;
+		font-size: 1.1em;
+    	margin-bottom: 8px;
+	}
+	.timestamp {
+		font-size: 0.8em;
+	}
+	
+	.line {
+		position: absolute;
+	    left: 29px;
+
+		&.success {
+			background: $success-color;
+		}
+		&.danger {
+			background: $danger-color;
+		}
+	}
+	.prev-line {
+	    height: 44px;
+	    width: 2px;
+	    top: 0px;
+	}
+	.next-line {
+	    height: 50%;
+	    width: 2px;
+	    top: 50%;
+	}
+	.next-line-body {
+	    height: auto;
+	    width: 2px;
+	    top: 0;
+	    bottom: 0;
+
+		&.success {
+			background: $success-color;
+		}
+		&.danger {
+			background: $danger-color;
+		}
+	}
+
+	.slide-up-down-container {
+		padding: 0;
+	}
+
+	.item-body {
+		padding: 8px 0px;
+		position: relative;
+		padding-left: 64px;
+	}
+}

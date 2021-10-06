@@ -1,0 +1,58 @@
+.breadcrumps {
+    margin: 24px 0px 16px;
+
+	li {
+		display: inline-block;
+		list-style: none;
+	    padding-right: 14px;
+	    margin-right: 14px;
+	    position: relative;
+
+		&:after {
+			content: "\69";
+			display: inline-block;
+			font-family: "itl-track" !important;
+			font-style: normal !important;
+			font-weight: normal !important;
+			font-variant: normal !important;
+			text-transform: none !important;
+			speak: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-size: 0.9em;
+			position: absolute;
+			right: 0;
+			top: 50%;
+		    width: 12px;
+		    text-align: center;
+		    margin-right: -7px;
+    		margin-top: -4px;
+		}
+
+		&:last-of-type {
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.item-text {
+	    font-size: 1.8em;
+	    font-weight: 300;
+	    font-family: $light-font;
+		text-decoration: none;
+    	letter-spacing: 0.6px;
+	}
+}
+
+
+@media screen and (max-width: $small-size) {
+	.breadcrumps .item-text {
+	    font-size: 1.4em;
+	}
+	.breadcrumps li:after {
+    	font-size: 0.8em;
+    	margin-top: -5px;
+	}
+}

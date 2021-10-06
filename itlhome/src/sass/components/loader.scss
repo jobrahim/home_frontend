@@ -1,0 +1,63 @@
+/*$color-1: #2E85E8; 
+$color-2: #3B75DE;
+$color-3: #4468D5; 
+$color-4: #4D5CCE;
+$color-5: #584CC3;
+
+
+$color: $color-1, $color-2, $color-3, $color-4, $color-5;*/
+
+$color: $text-color-light, $text-color-light, $text-color-light, $text-color-light, $text-color-light;
+
+@mixin anim() {
+	@keyframes scale {
+		0% {
+			transform: scale(1);
+		}
+		50%,
+		75% {
+			transform: scale(2.5);
+		}
+		78%, 100% {
+			opacity: 0;
+		}
+	}
+}
+
+.loader-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	overflow: hidden;
+	animation-delay: 1s;
+    padding: 24px 0px;
+}
+
+@for $i from 1 through 5 {
+	.loader-item-#{$i} {
+		width: 10px;
+		height: 10px;
+		background: #f583a1;
+		border-radius: 50%;
+		@include anim();
+		background-color: nth($color, $i);
+		margin: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:before {
+			content: '';
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: nth($color, $i);
+			opacity: 0.7;
+			animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+			animation-delay: 200ms * $i;
+			transition: 0.5s all ease;
+			transform: scale(1);
+		}
+	}
+}

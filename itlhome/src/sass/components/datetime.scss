@@ -1,0 +1,188 @@
+.vdatetime-overlay {
+    z-index: 99999999 !important;
+}
+
+.vdatetime-time-picker__list {
+
+	&::-webkit-scrollbar {
+	    width: 10px !important;
+	}
+	&::-webkit-scrollbar-track {
+	    background: #efefef;
+	}
+	&::-webkit-scrollbar-thumb {
+	    background: #ccc;
+	}
+}
+
+.vdatetime-calendar__current--month {
+	font-family: arial;
+}
+
+.datetime-component {
+
+	span {
+		font-family: arial;
+	}
+
+
+	.vdatetime-input {
+	    border: 1px solid #E0E7FF;
+	    background-color: #F9FAFF;
+	    color: #1A1A1A;
+	    box-sizing: border-box;
+	    padding: 8px 16px;
+	    width: 100%;
+	    border-radius: 4px;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+
+	}
+
+	&.main-input {
+		.datetime-clear-btn i.icon {
+			color: #fff;
+		}
+	}
+
+	&.inline {
+		.datetime-container {
+		    width: 75%;
+		    float: left;	
+		}
+	}
+	
+	.datetime-container {
+		position: relative;
+
+		.datetime-clear-btn {
+		    position: absolute;
+		    right: 20px;
+		    top: 50%;
+		    padding: 8px;
+		    margin: 0;
+		    width: 32px;
+		    margin-top: -14px;
+		}
+
+		.datetime {
+
+			.vdatetime-input {
+	    		width: 100%;
+    			box-sizing: border-box;
+	    		cursor: pointer;
+			    background-image: url('./assets/select-arrows.svg');
+			    background-repeat: no-repeat;
+			    background-position: right 15px center;
+			}
+
+			&.disabled {
+				.vdatetime-input {
+					cursor: initial;
+			        background-color: #dae0e4;
+			        border: 1px solid #CBCCCE;
+			        color: #91979a;
+				}
+			}
+
+
+			
+
+
+
+			.vdatetime-popup {
+				z-index: 999999999999999;
+			    //-webkit-font-smoothing: subpixel-antialiased;	
+			}
+
+			.vdatetime-popup__header {
+				background-color: $primary-color;
+				text-align: left;
+			}
+
+			.vdatetime-popup__title {
+				color: #fff;
+			}
+			.vdatetime-popup__year {
+				color: #fff;
+				font-size: 1.1em;
+			}
+			.vdatetime-popup__date {
+				color: #fff;
+				font-size: 0.6em;
+			}
+			.vdatetime-calendar__month__day--current_day > span > span {
+				background-color: $bg-color;
+			}
+			.vdatetime-calendar__month__day--deadline > span > span {
+				background-color: $danger-color;
+				color: #fff;
+			}
+			.vdatetime-calendar__month__day--selected > span > span, .vdatetime-calendar__month__day--selected:hover > span > span {
+				background-color: $primary-color;
+			}
+			.vdatetime-popup__actions__button {
+				color: $primary-color;
+			}
+			.vdatetime-year-picker__item--selected {
+				color: $primary-color;	
+			}
+			.vdatetime-month-picker__item--selected {
+				color: $primary-color;	
+			}
+
+		}
+	}
+
+	.vdatetime-calendar__leyend {
+		text-align: left;
+    	padding: 8px 20px;
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+    	.vdatetime-calendar__leyend-day  {
+		    display: inline-block;
+		    font-size: 0.75em;
+		    float: left;
+		    position: relative;
+		    padding-left: 20px;
+		    margin-right: 15px;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+    			vertical-align: text-top;
+    			position: absolute;
+			    top: 1px;
+			    left: 4px;
+			}
+    	}
+
+		.vdatetime-calendar__leyend-current-day {
+			&:before {
+				background-color: $bg-color;
+			}
+		}
+
+		.vdatetime-calendar__leyend-selected-day {
+			&:before {
+				background-color: $primary-color;
+			}
+		}
+
+		.vdatetime-calendar__leyend-deadline {
+			&:before {
+				background-color: $danger-color;
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,31 @@
+body {
+    background-color: $bg-color;
+}
+.contenedor-layout {
+    transition: all 0.3s;
+    
+	&.with-header {
+    	padding-top: $header-size;	
+	}
+    &.open {
+    	padding-left: $sidebar-size;
+    }
+
+    .contenedor-layout-main {
+        position: relative;
+    }
+}
+
+
+@media screen and (max-width: $medium-size) {
+    .contenedor-layout {
+        padding-left: 0px !important;
+
+        &.with-header {
+            padding-top: 56px;
+        }
+    }
+}
+
+@media screen and (max-width: $small-size) {
+}

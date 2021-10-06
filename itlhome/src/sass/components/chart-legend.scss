@@ -1,0 +1,17 @@
+.chart-legend {
+	display: inline-block;
+    padding-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	
+	.dot {
+		display: inline-block;
+		margin-right: 8px;
+	    width: 12px;
+	    height: 12px;
+	    border-radius: 6px;
+	    position: relative;
+	    top: 1px;
+	}
+}

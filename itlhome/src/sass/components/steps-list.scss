@@ -1,0 +1,27 @@
+.selected-service {
+	h3 {
+	    font-family: $light-font;
+	    font-size: 1.9em;
+	    display: block;
+	    margin-bottom: 8px;
+	}
+
+	.selected-service-time {
+	    margin-bottom: 8px;
+	    display: inline-block;
+    	font-size: 1.15em;
+	}
+}
+
+.steps-list {
+	margin-top: 32px;
+	
+	li {
+		list-style: none;
+		border-bottom: 1px solid $border-color;
+
+		&:first-of-type {
+			border-top: 1px solid $border-color;
+		}
+	}
+}

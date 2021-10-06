@@ -1,0 +1,147 @@
+.pos-rel { position: relative; }
+.pos-abs { position: absolute; }
+.fixed   { position: fixed; }
+.clear   { 
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+.hidden  { display: none; }
+.display-inline-block  { display: inline-block; }
+.display-block  { display: block; }
+.full-width { width: 100% !important; }
+.full-height { height: 100% !important; }
+.no-min-width { min-width: initial !important;  }
+.float-right { float: right; }
+.float-left { float: left; }
+
+.no-margin         {   margin: 0 !important;          }
+.no-margin-top     {   margin-top: 0 !important;      }
+.no-margin-right   {   margin-right: 0 !important;    }
+.no-margin-bottom  {   margin-bottom: 0 !important;   }
+.no-margin-left    {   margin-left: 0 !important;     }
+
+.no-padding         {   padding: 0 !important;          }
+.no-padding-top     {   padding-top: 0 !important;      }
+.no-padding-right   {   padding-right: 0 !important;    }
+.no-padding-bottom  {   padding-bottom: 0 !important;   }
+.no-padding-left    {   padding-left: 0 !important;     }
+
+.margin         { margin: 24px !important }
+.margin-top     { margin-top: 24px !important;  }
+.margin-bottom  { margin-bottom: 24px !important;  }
+.margin-right   { margin-right: 24px !important;  }
+.margin-left    { margin-left: 24px !important;  }
+
+.margin-xs         { margin: 8px !important }
+.margin-top-xs     { margin-top: 8px !important;  }
+.margin-bottom-xs  { margin-bottom: 8px !important;  }
+.margin-right-xs   { margin-right: 8px !important;  }
+.margin-left-xs    { margin-left: 8px !important;  }
+
+.padding        { padding: 24px !important }
+.padding-top    { padding-top: 24px !important; }
+.padding-bottom { padding-bottom: 24px !important; }
+.padding-left   { padding-left: 24px !important; }
+.padding-right  { padding-right: 24px !important; }
+
+.padding-xs         { padding: 8px !important }
+.padding-top-xs     { padding-top: 8px !important;  }
+.padding-bottom-xs  { padding-bottom: 8px !important;  }
+.padding-right-xs   { padding-right: 8px !important;  }
+.padding-left-xs    { padding-left: 8px !important;  }
+
+.no-font-size { font-size: 0; }
+.pre-wrap { white-space: pre-wrap; }
+.no-list-style { list-style-type: none; }
+.no-text-decoration { text-decoration: none; }
+
+.align-end {
+    align-self: end;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+a.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-cover, .bg {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.bg-contain {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-primary { background-color: $primary-color; }
+.bg-primary-dark { background-color: $primary-dark; }
+.bg-primary-light { background-color: $primary-light; }
+
+.bg-secondary { background-color: $secondary-color; }
+.bg-secondary-dark { background-color: $secondary-dark; }
+.bg-secondary-light { background-color: $secondary-light; }
+
+.bg-tertiary { background-color: $tertiary-color; }
+.bg-tertiary-dark { background-color: $tertiary-dark; }
+.bg-tertiary-light { background-color: $tertiary-light; }
+
+.bg-danger { background-color: $danger-color; }
+.bg-danger-dark { background-color: $danger-dark; }
+.bg-danger-light { background-color: $danger-light; }
+
+.bg-success { background-color: $success-color; }
+.bg-success-dark { background-color: $success-dark; }
+.bg-success-light { background-color: $success-light; }
+
+.bg-warning { background-color: $warning-color; }
+.bg-warning-dark { background-color: $warning-dark; }
+.bg-warning-light { background-color: $warning-light; }
+
+
+.hide-xl {
+    display: none !important;
+}
+.show-xl {
+    display: initial !important;
+}
+@media screen and (max-width: $large-size) {
+    .hide-lg {
+        display: none !important;
+    }
+    .show-lg {
+        display: initial !important;
+    }
+}
+@media screen and (max-width: $medium-size) {
+    .hide-md {
+        display: none !important;
+    }
+    .show-md {
+        display: initial !important;
+    }
+}
+@media screen and (max-width: $small-size) {
+    .hide-sm {
+        display: none !important;
+    }
+    .show-sm {
+        display: initial !important;
+    }
+}

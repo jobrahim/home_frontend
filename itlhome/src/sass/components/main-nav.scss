@@ -1,0 +1,170 @@
+#mainNav {
+	position: fixed;
+	z-index: 99999999;
+	left: -$sidebar-size;
+	top: 0;
+	padding-top: $header-size;
+	height: 100%;
+	width: $sidebar-size;
+	background: $neutral-color;
+    overflow: auto;
+    transition: all 0.3s;
+
+	.avatar {
+		top: 3px;
+		left: 24px;
+	}
+
+	.avatar-name {
+    	max-width: 130px;
+	}
+	.avatar-sub-text {
+    	max-width: 130px;
+	}
+
+    .inner {
+    	position: relative;
+    	height: 100%;
+	    padding-top: 24px;
+	    padding-bottom: 45px;
+    }
+
+    .nav {
+    	padding-top: 24px;
+    }
+
+	a {
+	    display: inline-block;
+	    width: 100%;
+		position: relative;
+
+		span {
+			display: inline-block;
+			color: $text-color-menu;
+			text-align: left !important;
+			margin: 0px;
+			padding: 16px;
+			font-size: 0.9em;
+			text-transform: none;
+
+			&:hover {
+				background-color: $primary-light;
+			}
+			i {
+				color: $text-color-menu;
+				padding-right: 16px;
+				font-size: 20px;
+			}	
+		}
+		
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 4px;
+			background: $secondary-color;
+			transform: translateX(-100%);
+			transition: all 0.3s;
+		}
+
+		&.router-link-active {
+			background-color: $primary-light;
+			color: $primary-color;
+
+			&:after {
+				transform: translateX(0%);
+			}
+
+
+			span {
+				color: $primary-color;
+			}
+
+			i {
+				color: $primary-color;
+			}
+		}
+	}
+	li {
+		&.active {
+			a, a i {
+				color: $warning-color;
+			}
+		}
+	}
+	.button-footer {
+		position: absolute;
+	    width: 100%;
+	    bottom: 72px;
+	}
+
+	.badge {
+		background-color: $danger-color;
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		font-size: 12px;
+		color: #fff;
+		position: absolute;
+		top: 12px;
+		right: 13px;
+		text-align: center;
+		padding: 4px 0px;
+	}
+	
+	.aux-nav {
+		display: none;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 9;
+	}
+
+	&.open {
+		left: 0px;
+	}
+
+	.botttom-nav {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.back-btn {
+		margin-top: 32px;
+	}
+}
+
+.aux-nav {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 999999;
+}
+
+
+@media screen and (max-width: $medium-size) {
+	#mainNav {
+    	padding-top: 56px;
+		left: -$sidebar-size;
+		
+		&.open .aux-nav {
+			display: block;
+		}
+    }
+}
+
+@media screen and (max-width: $small-size) {
+}

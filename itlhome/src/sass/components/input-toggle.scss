@@ -1,0 +1,57 @@
+.input-toggle {
+    display: inline-block;
+    width: 44px;
+	height: 24px;
+	border-radius: 12px;
+	background: $neutral-color;
+	border: 2px solid $text-color-light;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&.disabled {
+		cursor: initial;
+
+		&.active {
+			background: $text-color-light;
+			border: 2px solid $text-color-light;
+
+			.ball {
+				background: $neutral-color;
+			}
+		}
+	}
+
+	.inner {
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		position: relative;
+		transition: all 0.3s;
+		transform: translateX(0%);
+	}
+
+	.ball {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		left: -8px;
+		top: -8px;
+		border-radius: 8px;
+		background: $text-color-light;
+		transition: all 0.3s;
+	}
+
+	&.active {
+		background: $primary-color;
+		border: 2px solid $primary-color;
+
+		.inner {
+			transform: translateX(100%);
+		}
+
+		.ball {
+			background: $neutral-color;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.tooltip-container {
+    display: inline-block;
+    position: relative;
+
+	.tooltip-text {
+		position: relative;
+	}
+
+	.tooltip-content {
+		position: absolute;
+	    right: 50%;
+	    bottom: 100%;
+	    min-width: 250px;
+	    max-width: 300px;
+	    text-align: left;
+		background-color: $bg-color;
+		border-radius: 3px;
+	    box-shadow: 0px 0px 15px 1px #e1e5ff;
+	    padding: 24px 16px;
+	    overflow: hidden;
+
+	    .control-label {
+	    	font-family: $primary-font;
+	    	margin-top: 0;
+	    	text-transform: initial;
+	    }
+
+	    p {
+	    	white-space: initial;
+	    }
+	}
+}

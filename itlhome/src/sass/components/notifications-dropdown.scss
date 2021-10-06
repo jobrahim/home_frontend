@@ -1,0 +1,116 @@
+.notifications-dropdown-container {
+	float: left;
+    margin-right: 8px;
+}
+
+.notifications-dropdown {
+	position: relative;
+    top: 3px;
+
+	&:hover {
+		.bell-icon i.icon {
+			color: $text-color;
+		}
+	}
+
+	.bell-icon	{
+	    display: block;
+	    padding: 12px 13px;
+	    cursor: pointer;
+	    position: relative;
+    	z-index: 999;
+
+		i.icon {
+    		font-size: 1.7em;
+    		color: $text-color-light;
+    		transition: all 0.3s;
+		}
+
+		.unread-badge {
+		    background: $danger-color;
+		    color: $neutral-color;
+		    position: absolute;
+		    top: 4px;
+		    right: 2px;
+		    width: 20px;
+		    height: 20px;
+		    border-radius: 50%;
+		    text-align: center;
+		    font-size: 12px;
+		    padding: 4px 0px;
+		}
+	}
+
+	.notifications-dropdown-box {
+		background-color: $neutral-color;
+		border-radius: 3px;
+	    box-shadow: 0px 0px 15px 1px #e1e5ff;
+	    padding: 0px 16px;
+    	padding-top: 8px;
+	    overflow: hidden;
+	    width: 470px;
+	    text-align: left;
+	    position: absolute;
+	    right: -16px;
+	    top: 100%;
+
+	    .notifications-list {
+    		li {
+		    	list-style: none;
+			    border-bottom: 1px solid $border-color;
+
+			    &:last-of-type {
+			    	border-bottom: none;
+			    }
+
+		    	&.viewed {
+		    		a {
+		    			color: $text-color-light;
+		    		}
+		    	}
+
+			    .timestamp {
+			    	display: block;
+		    		color: $text-color-light;
+		    		font-size: 0.9em;
+	    			line-height: 1.6em;
+			    }
+
+			    a {
+			    	font-size: 0.9em;
+			    	display: block;
+			    	text-decoration: none;
+			    	padding: 8px 0px;
+			    	transition: all 0.3s;
+
+			    	&:hover {
+			    		color: $primary-dark;
+			    	}
+			    }
+
+		    }
+	    }
+
+	    .see-more-btn {
+		    padding: 12px 0px;
+		    font-size: 0.9em;
+	    }
+	}
+}
+
+
+@media screen and (max-width: 560px) {
+	.notifications-dropdown {
+		position: static;
+
+		.bell-icon {
+    		top: 4px;	
+		}
+		
+		.notifications-dropdown-box {
+			width: auto;
+			right: 16px;
+			left: 16px;
+		}
+	}
+}

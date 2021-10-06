@@ -1,0 +1,313 @@
+@keyframes loading {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -40px;
+    }
+}
+
+.btn-loader {
+    background-image: url('./assets/small-loader.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+.inline-button {
+    width: 100%;
+    label {
+        width: 25%;
+        float: left;
+        text-align: left;
+    }
+    button {
+        margin: 0px;
+    }
+    &:aftre {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.form-button {
+    display: inline-block;
+    text-align: left;
+
+    button {
+        &.loading {
+            color: transparent;
+        }
+
+        &.inline{
+            margin-left: 25%;
+            &.with-label {
+                margin-left: 0;
+            }
+            &.btn-link {
+                margin: 11px 0px;
+            }
+        }
+    }
+}
+
+.btn {
+    font-family: $primary-font;
+    display: inline-block;
+    position: relative;
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
+    color: #fff;
+    padding: 8px 16px;
+    margin-top: 16px;
+    min-width: 144px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+
+    &:hover{
+        background-color: $primary-dark;
+        border: 2px solid $primary-dark;
+    }
+
+    & + .btn {
+        margin-left: 16px;
+    }
+
+    i.icon {
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding-right: 5px;
+        line-height: 0;
+        color: inherit;
+        position: relative;
+        top: -1px;
+
+        &:before {
+            line-height: 0;
+        }
+    }
+    
+    &.btn-square {
+        border-radius: 0;
+    }
+
+    &.btn-small {
+        padding: 8px;
+        font-size: 0.7em;
+        min-width: 104px;
+    }
+
+    &.btn-big {
+        font-size: 1.2em;
+        padding: 32px;
+    }
+
+    &.btn-block {
+        width: 100%;
+        text-align: center;
+    }
+
+    &.btn-action {
+        width: 24px;
+        height: 24px;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        border: none;
+
+        i.icon {
+            font-size: 16px;
+            line-height: 1;
+            padding: 0;
+            position: relative;
+            top: 0px;
+            color: $text-color;
+
+            &:before {
+                line-height: 1;
+            }
+        }
+    }
+
+    &.btn-link {
+        padding: 0px;
+        margin: 0px;
+        border-radius: 0px;
+        font-weight: 500;
+        font-family: $bold-font;
+        min-width: 0px;
+        text-transform: initial;
+        text-align: initial;
+    }
+
+    &.btn-outline, &.btn-clear, &.btn-link, &.btn-action {
+        background-color: transparent;
+        color: $primary-color;
+        &:hover {
+            background-color: transparent;
+            color: $primary-dark;
+        }
+    }
+
+    &.btn-gradient {
+        background: $primary-color; /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  $primary-color 0%, $secondary-color 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg,  $primary-color 0%,$secondary-color 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg,  $primary-color 0%,$secondary-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary-color', endColorstr='$secondary-color',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        color: #000;
+        border: transparent;
+    }
+
+    &.btn-secondary {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        &:hover {
+            border-color: $secondary-dark;
+            background-color: $secondary-dark;
+        }
+
+        &.btn-clear, &.btn-outline, &.btn-link, &.btn-action {
+            color: $secondary-color;
+            background-color: transparent;
+            &:hover {
+                color: $secondary-dark;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.btn-tertiary {
+        background-color: $tertiary-color;
+        border-color: $tertiary-color;
+        &:hover {
+            border-color: $tertiary-dark;
+            background-color: $tertiary-dark;
+        }
+
+        &.btn-clear, &.btn-outline, &.btn-link, &.btn-action {
+            color: $tertiary-color;
+            background-color: transparent;
+            &:hover {
+                color: $tertiary-dark;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.btn-danger {
+        background-color: $danger-color;
+        border-color: $danger-color;
+        &:hover {
+            background-color: $danger-dark;
+            border-color: $danger-dark;
+        }
+
+        &.btn-clear, &.btn-outline, &.btn-link, &.btn-action {
+            color: $danger-color;
+            background-color: transparent;
+            &:hover {
+                color: $danger-dark;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.btn-clear, &.btn-link {
+        border-color: transparent;
+        &:hover {
+            border-color: transparent;
+        }
+    }
+    
+    &.disabled {
+        background: $disabled-color;
+        cursor: not-allowed;
+        border-color: $disabled-border-color;
+        color: $text-color-light;
+
+        &:hover {
+            background: $disabled-color;
+            border-color: $disabled-border-color;
+        }
+    }
+
+    &.btn-audit {
+        padding-left: 42px;
+
+        &.auditing {
+            i {
+                animation-name: rotate; 
+                animation-duration: 2s; 
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+        }
+
+        i {
+            display: inline-block;
+            position: absolute;
+            left: 12px;
+            top: 8px;
+            margin: 0;
+            padding: 0;
+            height: 19px;
+            width: 19px;
+            font-size: 18px;
+            vertical-align: sub;
+        }
+    }
+
+    &.btn-next-to-input {
+        margin-top: 34px;
+    }
+
+    &.btn-white {
+        &.btn-outline {
+            color: $text-color-light;
+            border-color: $text-color-light;
+
+            &:hover {
+                background-color: transparent;
+                color: $neutral-color;
+                border-color: $neutral-color;
+            }   
+        }
+    }
+}
+
+@media screen and (max-width: $medium-size) {
+    .btn {
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width: $small-size) {
+    .btn {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+}
+
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}

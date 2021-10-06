@@ -1,0 +1,44 @@
+.status-display {
+	margin: 24px 0px;
+	position: relative;
+	padding-left: 26px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+	    top: 6px;
+	    left: 6px;
+		width: 12px;
+		height: 12px;
+		border-radius: 6px;
+		background: $primary-color;
+	}
+
+	&.success:before {
+		background: $success-color;
+	}
+
+	&.warning:before {
+		background: $warning-color;
+	}
+
+	&.danger:before {
+		background: $danger-color;
+	}
+
+	.medium-number {
+		display: inline-block;
+		width: 40px;
+		text-align: center;
+	}
+	.text {
+	    color: $text-color-light;
+		display: inline-block;
+		margin-left: 16px;
+		margin-top: 6px;
+    	vertical-align: top;
+	    text-transform: uppercase;
+	    font-size: 0.9em;
+	}
+}

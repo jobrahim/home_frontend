@@ -1,0 +1,160 @@
+.contenedor-layout {
+    
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-container {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    padding-bottom: $gap * 2;
+
+    > .grid {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.fullscreen-page-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+
+}
+
+.grid {
+    display: grid;
+    grid-gap: $gap;
+	margin: 0px $gap;
+    .grid {
+        margin: 0px;
+    }
+}
+
+.no-gap        { grid-gap: 0px;        }
+.no-column-gap { grid-column-gap: 0px; }
+.no-row-gap    { grid-row-gap: 0px;    }
+.small-gap     { grid-gap: $gap / 2;    }
+
+.align-items-end { align-items: end; }
+.align-items-start { align-items: start; }
+.align-items-center { align-items: center; }
+
+@for $i from 1 through 12 {
+    .grid-xl-#{$i}{
+        grid-template-columns: repeat($i, 1fr);
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-xl-#{$i}{
+        grid-column: span $i;
+        &.order-xl-#{$i}{
+            order: $i;
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .order-xl-#{$i}{
+        order: $i;
+    }
+}
+
+@media screen and (max-width: $large-size) {
+
+    @for $i from 1 through 12 {
+        .grid-lg-#{$i}{
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .col-lg-#{$i}{
+            grid-column: span $i;
+            &.order-lg-#{$i}{
+                order: $i;
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .order-lg-#{$i}{
+            order: $i;
+        }
+    }
+}
+
+
+@media screen and (max-width: $medium-size) {
+
+    .page-container {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
+
+    @for $i from 1 through 12 {
+        .grid-md-#{$i}{
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .col-md-#{$i}{
+            grid-column: span $i;
+            &.order-md-#{$i}{
+                order: $i;
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .order-md-#{$i}{
+            order: $i;
+        }
+    }
+}
+
+@media screen and (max-width: $small-size) {
+    
+    .page-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .grid {
+        grid-gap: $gap / 2;
+    }
+
+    @for $i from 1 through 12 {
+        .grid-sm-#{$i}{
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .col-sm-#{$i}{
+            grid-column: span $i;
+            &.order-sm-#{$i}{
+                order: $i;
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .order-sm-#{$i}{
+            order: $i;
+        }
+    }
+}

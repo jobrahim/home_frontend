@@ -1,0 +1,221 @@
+.table {
+    overflow: auto;
+    
+    &.table-selectable {
+        tbody {
+            tr {
+                cursor: pointer;
+            }
+        }
+    }
+    
+    table {
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
+
+        tr {
+            background: $neutral-color;
+            border-bottom: 8px solid $bg-color;
+
+            &:last-of-type {
+                border-bottom: 0px solid $bg-color;                
+            }
+
+            &.disabled {
+                background-color: #CBCCCE !important;
+            }
+            &.selected {
+                background-color: $primary-color !important;
+                td {
+                    color: #fff !important;    
+                }
+            }
+        } 
+
+        td {
+            position: relative;
+            color: $text-color;
+            padding: 8px 8px;
+            height: 75px;
+            font-size: 1em;
+            white-space: nowrap;
+            vertical-align: middle;
+            line-height: 1.4em;
+            max-width: 200px;
+
+            &:first-of-type{
+                border: 0px;
+                padding-left: 16px;
+            }
+
+            &.ellipsis {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            a {
+                text-transform: none;
+                font-size: inherit;
+            }
+            span, strong {
+                font-size: inherit;
+            }
+            i.icon.table-icon {
+                line-height: 0.9em;
+            }
+            &.avatar {
+                padding: 8px 12px;
+                img {
+                    max-width: 25px;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+            .progress-bar-component {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+            &.max-width {
+                max-width: 200px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+                strong {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+            &.time-column {
+                width: 140px;
+            }
+        }
+        
+        thead {
+            tr {
+                background: $bg-color;
+            }
+
+            th {
+                color: $text-color-light;
+                white-space: nowrap;
+                color: #8798AD;
+                text-transform: uppercase;
+                text-align: left;
+                font-size: 0.8em;
+                font-weight: 500;
+                font-family: $bold-font;
+                letter-spacing: 0.6px;
+                padding: 16px 8px;
+                line-height: 1.2em;
+
+                &:first-of-type {
+                    padding-left: 16px;
+                }
+
+                &.select-col {
+                    min-width: 32px;
+                }
+
+                &.action-col {
+                    width: 56px;
+                }
+            }
+        }
+
+
+        .sort {
+            width: 37px;
+            text-align: left;
+            padding-right: 16px;
+            font-size: 0.8em;
+            padding: 0px 0px;
+            cursor: s-resize;
+
+            a {
+                display: block;
+                padding: 8px;
+            }
+        }
+
+        .number {
+            text-align: center;
+            width: 40px;
+        }
+
+        .actions {
+            width: 128px;
+            min-width: 128px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .select-input {
+            width: 48px;
+            text-align: center;
+        }
+
+    }
+
+    .select-checkbox {
+        left: 14px;
+    }
+
+    &.table-small {
+        table {
+            thead th {
+                white-space: initial;
+                max-width: 120px;
+            }
+            td {
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    &.table-small-row {
+        table {
+            td {
+                height: 56px;
+            }
+        }
+    }
+
+    &.table-secondary {
+        overflow: visible;
+
+        table {
+
+            thead tr {
+                background: transparent;
+            }
+
+            tbody {
+                border: 2px solid $bg-color;
+
+                tr {
+                    border-bottom: 2px solid $bg-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small-size) {
+    
+    .table table td {
+        padding: 16px 4px;
+        height: auto;
+        max-width: 150px;
+    }
+
+    .sm-max-width {
+        max-width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

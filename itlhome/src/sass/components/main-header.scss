@@ -1,0 +1,121 @@
+#mainHeader {
+	color: #fff;
+	height: $header-size;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999999;
+	padding-left: 0px;
+	background: $neutral-color;
+	transition: all 0.3s;
+
+	&.open {
+		padding-left: ($sidebar-size - 1);
+
+		.inner {
+			padding-left: 0;
+		}
+	}
+
+	.inner {
+		height: inherit;
+		background: $neutral-color;
+		border-bottom: 1px solid $border-color;
+		padding-left: 40px;
+		transition: all 0.3s;
+	}
+
+	.menu {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -28px;
+    	padding: 15px 16px;
+		cursor: pointer;
+
+		i.icon {
+    		font-size: 21px;
+    		color: $text-color-dark;
+		    position: relative;
+		    top: 4px;
+		}
+	}
+
+	.itl-logo {
+	    color: $primary-dark;
+	    font-size: 1.4em;
+	    letter-spacing: initial;
+	    padding: 5px;
+	    font-weight: 400;
+	    max-width: 76px;
+
+	    img {
+	    	width: 100%;
+	    }
+	}
+
+	.select-account {
+		color: $neutral-color;
+	    vertical-align: middle;
+	    cursor: pointer
+	}
+	.grid {
+    	grid-template-rows: $header-size;
+    	align-items: center;
+	}
+	.grid-header-offset {
+		margin-left: $sidebar-size;
+	}
+	.header-left {
+		float: left;
+		padding-left: 12px;
+	}
+	.header-right {
+		float: right;
+		padding-right: 12px;
+	}
+}
+
+
+@media screen and (max-width: $medium-size) {
+	
+	#mainHeader {
+    	height: 56px;
+    	padding-left: 0px;
+
+    	&.open {
+    		padding-left: 0px;
+    	}
+
+    	.inner {
+    		padding: 0;
+    	}
+
+    	.grid {
+    		align-items: initial;
+    		grid-template-rows: initial
+    	}
+
+    	.itl-logo {
+		    padding: 8px 27px;
+		    padding-left: 52px;
+		    max-width: 150px;
+
+		    img {
+		    	width: 100%;
+		    }
+    	}
+	}
+}
+
+@media screen and (max-width: $small-size) {
+	#mainHeader {
+		.title-header {
+			width: 160px;
+		}
+		.grid-header-offset {
+			margin-left: 110px;
+		}
+	}
+}

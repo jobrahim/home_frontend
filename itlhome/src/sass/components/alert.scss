@@ -1,0 +1,64 @@
+.alerts {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 99999999999999;
+    min-width: 248px;
+}
+
+.alert {
+    position: relative;
+    background-color: $primary-color;
+    font-family: $bold-font;
+    color: #fff;
+    padding: 16px 40px;
+    margin-top: 16px;
+    margin-left: 32px;
+    border-radius: 3px;
+    max-width: 504px;
+    line-height: 1.3em;
+
+    &.full {
+        max-width: none;
+    }
+
+    .link {
+        color: #fff;
+    }
+
+    .dismiss {
+        position: absolute;
+        right: 16px;
+        top: 0;
+        cursor: pointer;
+        padding: 16px;
+        text-align: center;
+
+        i {
+            color: #fff;
+        }
+    }
+
+    .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 16px;
+        text-align: center;
+        i {
+            color: #fff;
+        }
+    }
+
+    &.alert-success {
+        background-color: $success-color;
+    }
+
+    &.alert-warning {
+        background-color: $warning-color;
+    }
+    
+    &.alert-error {
+        background-color: $danger-color;
+    }
+}

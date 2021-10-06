@@ -1,0 +1,35 @@
+.notification-groups-editor {
+
+}
+
+.notification-channel-selector {
+
+	.channel {
+	    border: 1px solid gray;
+	    background: transparent;
+	    border-radius: 4px;
+	    width: 52px;
+	    height: 35px;
+	    padding: 5px;
+	    cursor: pointer;
+	    transition: all 0.3s;
+
+	    + .channel {
+	    	margin-left: 4px;
+	    }
+
+	    i.icon {
+			font-size: 23px;
+	    	transition: all 0.3s;
+	    }
+
+	    &.selected {
+	    	background-color: $primary-color;
+	    	border-color: $primary-color;
+
+		    i.icon {
+		    	color: $neutral-color;
+		    }
+	    }
+	}
+}

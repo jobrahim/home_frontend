@@ -1,0 +1,50 @@
+.filter-cards {
+	padding-top: 16px;
+    min-height: 51px;
+}
+
+.filter-card {
+	position: relative;
+	display: inline-block;
+	border: 2px solid $primary-color;
+    padding: 8px 16px;	
+    color: $primary-color;
+    min-width: 144px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: $bold-font;
+    letter-spacing: 0.05em;
+    padding-right: 32px;
+
+    & + .filter-card {
+    	margin-left: 16px;
+    }
+
+    .btn-remove {
+    	background: transparent;
+    	cursor: pointer;
+	    position: absolute;
+	    right: 4px;
+	    top: 4px;
+	    border: none;
+	    padding: 0;
+	    line-height: 1em;
+	    width: 24px;
+	    height: 24px;
+
+	    &:hover {
+		    i.icon {
+	    		color: $primary-dark;
+		    }
+	    }
+
+	    i.icon {
+    		color: $primary-color;
+    		transition: all 0.3s;
+	    }
+    }
+}
