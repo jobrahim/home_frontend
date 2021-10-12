@@ -1,7 +1,8 @@
+
 #mainNav {
 	position: fixed;
 	z-index: 99999999;
-	left: -$sidebar-size;
+	left: -$sidebar-size;//0px
 	top: 0;
 	padding-top: $header-size;
 	height: 100%;
