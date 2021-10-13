@@ -22,7 +22,7 @@ let initOptions = {
 }
 
 let keycloak = Keycloak(initOptions);
-
+console.log("keycloak",keycloak)
 function refreshToken() {
     keycloak.updateToken(70).then((refreshed) => {
         if (refreshed) {
@@ -39,7 +39,7 @@ keycloak.onTokenExpired = function () {
 }
 
 
-window.user = null;
+
 
 keycloak.init({ onLoad: initOptions.onLoad }).then((auth) => {
 
