@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/router'
 import Vue from 'vue'
-window.Vue = require('vue').default;
+
 import '@fortawesome/fontawesome-free/js/all'
 import * as Keycloak from 'keycloak-js'
 
@@ -22,10 +22,13 @@ let initOptions = {
 }
 
 let keycloak = Keycloak(initOptions);
-console.log("keycloak",keycloak)
+console.log("keycloak", keycloak)
+
 function refreshToken() {
     keycloak.updateToken(70).then((refreshed) => {
         if (refreshed) {
+            
+          
             localStorage.setItem("vue-token", keycloak.token);
             localStorage.setItem("vue-refresh-token", keycloak.refreshToken);
         }
@@ -42,11 +45,25 @@ keycloak.onTokenExpired = function () {
 
 
 keycloak.init({ onLoad: initOptions.onLoad }).then((auth) => {
-
+    console.log("auth",auth)
+  
+    if(!auth) {
+		window.location.reload();
+	}
+    localStorage.setItem("vue-token", keycloak.token);
+    localStorage.setItem("vue-refresh-token", keycloak.refreshToken);
+    localStorage.setItem("user-email", keycloak.idTokenParsed.email);
+    localStorage.setItem("user-name", keycloak.idTokenParsed.name);
+    localStorage.setItem("user", keycloak.idTokenParsed.preferred_username);
+  
     createApp(App).use(router).mount('#app')
 
 }).catch(() => {
 });
+
+
+
+
 
 
 

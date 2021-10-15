@@ -38,7 +38,8 @@
 		props: {
 			openNav: null,
 			break: { default: false },
-			user: { default: null }
+			user: { default: null },
+			
 		},
 
 		data() {

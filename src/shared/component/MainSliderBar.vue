@@ -8,7 +8,7 @@
 					square
 					small
 					:name="('Welcome')"
-					:sub-text="user.name + ' ' + user.lastname"
+					:sub-text="Facu + ' ' + Duartes"
 					:avatar="user.avatar"
 				></avatar>
 
@@ -53,6 +53,7 @@
 
 <script>
 import {defineAsyncComponent} from 'vue'
+
 export default {
 components:{
 Avatar:defineAsyncComponent(()=>import("../../components/Avatar/AvatarComponent.vue")),
@@ -60,8 +61,10 @@ Avatar:defineAsyncComponent(()=>import("../../components/Avatar/AvatarComponent.
 },
 
 	props: {
-			user: { default: null },
-			openNav:null
+		user:{default:null},
+		
+			openNav:null,
+
 		},
 
   computed: {

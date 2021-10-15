@@ -6,6 +6,7 @@
   <div id="app">
   <SliderBar
     :open-nav="openNav"
+    :keycloak="keycloak"
     :user="user"
     />
   <HeaderBar
@@ -45,6 +46,8 @@
 
 <script>
 import {defineAsyncComponent} from 'vue'
+import Keycloak from 'keycloak-js'
+// const user=(localStorage.getItem('vue-token'))
 
 
 
@@ -58,14 +61,15 @@ export default {
   data(){
 return{
   openNav: true,
-  user:{
-    name:"User test",
-    lastname:"Test"
-  }
+ user:{
+   name:"User test",
+   lastname:"test"
+ }
 }
   
   
-  },methods:{
+  },
+   methods:{
 openSidebar(){
  console.log("CLick entre")
  console.log("OpenNav",this.openNav)
