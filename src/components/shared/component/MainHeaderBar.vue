@@ -9,7 +9,7 @@
 				<div class="col-xl-7">
 					<h1 class="itl-logo">
                         <img alt="ITL Track"
-                            src="../../assets/Logo-ITL.jpg"
+                            src="../../../assets/Logo-ITL.jpg"
                             
 									>
 					</h1>
@@ -17,7 +17,7 @@
 				<div class="col-xl-5 text-right">
 					<div class="float-right clear">
 							<i class="icon icon-bell-two"></i>
-					<img src="../../assets/default-avatar.jpg" :alt="name" width= "32" height= "32">
+					<img src="../../../assets/default-avatar.jpg" :alt="name" width= "32" height= "32">
 				
 
 						<!-- <user-dropdown
@@ -72,7 +72,4 @@
 	}
 </script>
 
-<style lang="scss">
-    @import '@/sass/components/main-header.scss'; 
-</style>
 

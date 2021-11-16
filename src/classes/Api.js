@@ -46,13 +46,14 @@ export class Api {
 
     submit(requestType = "get", url, data = [], multipart = false, auth = true, handleError = true, concat = true, baseUrl = 'general') {
 
-        if( concat && process.env.VUE_APP_USE_DUMMY !== 'true' ) {
-            if( baseUrl == 'general' ) {
-                url = process.env.VUE_APP_BASE_URL + url;
-            } else {
-                url = process.env.VUE_APP_AUTH_URL + url;
-            }
-        }
+        // if( concat && process.env.VUE_APP_USE_DUMMY !== 'true' ) {
+        //     if( baseUrl == 'general' ) {
+        //         url = process.env.VUE_APP_BASE_URL + url;
+        //     } else {
+        //         url = process.env.VUE_APP_AUTH_URL + url;
+        //     }
+        // }
+        url = process.env.VUE_APP_BASE_URL + url;
 
         var config = { headers: {
             'Access-Control-Allow-Origin': '*',
@@ -65,7 +66,24 @@ export class Api {
 
         if( auth ) {
             let token = localStorage.getItem('vue-token');
-            config['headers']['Authorization'] = 'Bearer ' + token;
+                axios.interceptors.request.use(
+            (config) => {
+              
+             
+             
+                if (token) {
+                    
+                    config.headers['Authorization'] = `Bearer ${token}`;
+    
+                }
+    
+                return config;
+            },
+    
+            (error) => {
+                return Promise.reject(error);
+            }
+        );
         }
 
         return new Promise((resolve, reject) => {

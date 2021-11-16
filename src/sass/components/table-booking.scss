@@ -1,0 +1,43 @@
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+th{
+    
+}
+th, td{
+	padding: 20px;
+    font-size: 18px;
+}
+
+thead{
+	background-color: #d6d6da;
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+// tr:nth-child(even){
+// 	background-color: #ddd;
+// }
+
+tr:hover td{
+	cursor: pointer;
+	background-color: #d6d6da;
+	color: white;
+
+	
+}
+
+
+	//  tr:active td{
+		
+	// 	background-color: #434357;
+	// 	color: white;
+	//  }
+
+	tr.active td{
+		background-color: #434357;
+		color: white;
+	}

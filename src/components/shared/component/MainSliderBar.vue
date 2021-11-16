@@ -53,10 +53,12 @@
 
 <script>
 import {defineAsyncComponent} from 'vue'
+import axios from 'axios';
 
 export default {
 components:{
-Avatar:defineAsyncComponent(()=>import("../../components/Avatar/AvatarComponent.vue")),
+Avatar:defineAsyncComponent(()=>import("../../Avatar/AvatarComponent.vue")),
+
 
 },
 
@@ -90,11 +92,12 @@ Avatar:defineAsyncComponent(()=>import("../../components/Avatar/AvatarComponent.
     //   Event.$emit("open-nav");
     // },
 
-    // clicked() {
+    clicked() {
     //   if (this.$root.isMobile) {
     //     Event.$emit("open-nav");
     //   }
-    // },
+	axios.get("http://localhost:8081/")
+    },
   },
   
 };
@@ -102,5 +105,5 @@ Avatar:defineAsyncComponent(()=>import("../../components/Avatar/AvatarComponent.
 
 
 <style  lang="scss">
- @import "../../sass/components/main-nav.scss";
+ @import "../../../sass/components/main-nav.scss";
 </style>
