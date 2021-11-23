@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "vue-cli-service serve --host 0.0.0.0 --mode production",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@vue/cli": "^4.5.13",
+    "@vue/cli-service-global": "^4.5.13",
+    "@vue/compiler-sfc": "^3.2.20",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
     "@braks/revue-draggable": "^0.3.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "axios": "^0.22.0",
