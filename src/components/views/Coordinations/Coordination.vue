@@ -18,7 +18,9 @@ export default {
   },
   data() {
     return {
-      coordination: COORDINATION_URL,
+      coordination: `${COORDINATION_URL}?token=${localStorage.getItem(
+        "vue-token-home"
+      )}`,
     };
   },
 };
