@@ -6,7 +6,6 @@
     height="1300rem"
     scrolling="si"
   ></iframe>
-  ></iframe>
 </template>
 
 <script>
