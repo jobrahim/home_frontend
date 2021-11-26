@@ -35,8 +35,8 @@ function refreshToken() {
         if (refreshed) {
             
           
-            localStorage.setItem("vue-token-home", keycloak.token);
-            localStorage.setItem("vue-refresh-token-home", keycloak.refreshToken);
+            localStorage.setItem("vue-token", keycloak.token);
+            localStorage.setItem("vue-refresh-token", keycloak.refreshToken);
         }
     }).catch(() => {
         window.location.reload();
@@ -56,8 +56,8 @@ keycloak.init({ onLoad: 'login-required', checkLoginIframe: false }).then((auth)
     if(!auth) {
 		window.location.reload();
 	}
-    localStorage.setItem("vue-token-home", keycloak.token);
-    localStorage.setItem("vue-refresh-token-home", keycloak.refreshToken);
+    localStorage.setItem("vue-token", keycloak.token);
+    localStorage.setItem("vue-refresh-token", keycloak.refreshToken);
     localStorage.setItem("user-email", keycloak.idTokenParsed.email);
     localStorage.setItem("user-name", keycloak.idTokenParsed.name);
     localStorage.setItem("user", keycloak.idTokenParsed.preferred_username);
