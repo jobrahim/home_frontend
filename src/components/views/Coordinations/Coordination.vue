@@ -1,11 +1,11 @@
 <template>
-  <!-- <loader  ></loader> -->
   <iframe
-    :src="coordination"
+    :src="`${coordination}#/?token=${token}`"
     frameborder="0"
     width="100%"
-    height="1000"
-    scrolling="no"
+    height="1300rem"
+    scrolling="si"
+  ></iframe>
   ></iframe>
 </template>
 
@@ -18,10 +18,21 @@ export default {
   },
   data() {
     return {
-      coordination: `${COORDINATION_URL}?token=${localStorage.getItem(
-        "vue-token-home"
-      )}`,
+      coordination: COORDINATION_URL,
+      token: null,
     };
+  },
+  created() {
+    this.token = localStorage.getItem("vue-token");
+    console.log(this.token);
   },
 };
 </script>
+<style scoped>
+.loader-div {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
