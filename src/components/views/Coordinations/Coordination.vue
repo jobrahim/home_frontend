@@ -22,7 +22,7 @@ export default {
     };
   },
   created() {
-    this.token = localStorage.getItem("vue-token");
+    this.token = localStorage.getItem("vue-token-home");
     console.log(this.token);
   },
 };

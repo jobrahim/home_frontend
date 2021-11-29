@@ -34,7 +34,6 @@
 <script>
 import { defineAsyncComponent } from "vue";
 import Keycloak from "keycloak-js";
-// const user=(localStorage.getItem('vue-token'))
 
 export default {
   components: {
