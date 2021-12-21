@@ -1,7 +1,8 @@
 const {
-    VUE_APP_COORDINATION
-    } = process.env;
-  export const COORDINATION_URL=VUE_APP_COORDINATION;
-  
+  VUE_APP_COORDINATION,
+  VUE_APP_ORDERS,
+} = process.env;
+export const COORDINATION_URL = VUE_APP_COORDINATION;
+export const ORDERS_URL = VUE_APP_ORDERS;
 
-  
+
