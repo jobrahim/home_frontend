@@ -1,11 +1,14 @@
 <template>
   <!-- <header-component >
   </header-component> -->
-  <div class="contenedor-layout" id="app"
-  :class="{
-                'with-header': user !== null,
-                open: ($root.openNav && user !== null)
-            }">
+  <div
+    class="contenedor-layout"
+    id="app"
+    :class="{
+      'with-header': user !== null,
+      open: $root.openNav && user !== null,
+    }"
+  >
     <SliderBar :open-nav="openNav" :keycloak="keycloak" :user="user" />
     <HeaderBar @sidebar="openSidebar($event)" :open-nav="openNav" />
     <div class="contenedor-layout-main">
@@ -13,7 +16,7 @@
         <router-view></router-view>
       </transition>
     </div>
-<!-- <div class="contenedor-layout"
+    <!-- <div class="contenedor-layout"
             :class="{
                 'with-header': user !== null,
                 open: ($root.openNav && user !== null)
@@ -33,9 +36,11 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
-import Keycloak from "keycloak-js";
+
+// const user=(localStorage.getItem('vue-token'))
 
 export default {
+  name: "App",
   components: {
     SliderBar: defineAsyncComponent(() =>
       import("./components/shared/component/MainSliderBar.vue")

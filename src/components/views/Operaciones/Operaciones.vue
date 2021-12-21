@@ -1,34 +1,45 @@
 <template>
-	<div >
-		
-		<h1 >
-			Operaciones
-		</h1>
-
-		
-
-	</div>
+  <iframe
+    class="iiframe"
+    :src="`${orders}#/?token=${token}`"
+    frameborder="0"
+    width="100%"
+    height="1030rem"
+    scrolling="no"
+  ></iframe>
 </template>
 
+
+
+
+
 <script>
-	export default {
-
-		data() {
-			return {
-			}
-		},
-
-		methods: {
-		}
-	}
+import loader from "../../shared/LoaderComponent.vue";
+import { ORDERS_URL } from "../../../utils/Constants";
+export default {
+  components: {
+    loader,
+  },
+  data() {
+    return {
+      orders: ORDERS_URL,
+      token: null,
+    };
+  },
+  created() {
+    this.token = localStorage.getItem("vue-token");
+    // console.log(this.token);
+  },
+};
 </script>
-
 <style scoped>
-div{
-
-  padding-left: 216px;
-  padding-top: 64px;
-  transition: all 0.3s;
+.loader-div {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+/* .iiframe {
+  background-color: #f4f6fc;
+} */
 </style>

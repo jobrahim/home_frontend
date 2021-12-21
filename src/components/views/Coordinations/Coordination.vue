@@ -3,8 +3,8 @@
     :src="`${coordination}?token=${token}`"
     frameborder="0"
     width="100%"
-    height="1300rem"
-    scrolling="si"
+    height="1100rem"
+    scrolling="no"
   ></iframe>
 </template>
 
@@ -12,6 +12,9 @@
 import loader from "../../shared/LoaderComponent.vue";
 import { COORDINATION_URL } from "../../../utils/Constants";
 export default {
+  props: {
+    cooordination: false,
+  },
   components: {
     loader,
   },
@@ -24,12 +27,13 @@ export default {
   created() {
     this.token = localStorage.getItem("vue-token-home");
     console.log(this.token);
+    console.log(this.coordination);
   },
 };
 </script>
 <style scoped>
 .loader-div {
-  margin-top: 300px;
+  /* margin-top: 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;

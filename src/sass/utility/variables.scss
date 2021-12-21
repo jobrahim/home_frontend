@@ -1,39 +1,39 @@
 $primary-color: #006cff; // AZUL
-$primary-dark : #163A8B;
-$primary-light: #E9F3FD;
+$primary-dark: #163a8b;
+$primary-light: #e9f3fd;
 
-$secondary-color: #D63649; // ROJO
-$secondary-dark : #FF7E00;
+$secondary-color: #d63649; // ROJO
+$secondary-dark: #ff7e00;
 $secondary-light: lighten($secondary-color, 65%);
 
-$tertiary-color: #594CC3; // VIOLETA
-$tertiary-dark : #541E90;
+$tertiary-color: #594cc3; // VIOLETA
+$tertiary-dark: #541e90;
 $tertiary-light: lighten($tertiary-color, 35%);
 
-$danger-color: #D63649; // ROJO
-$danger-dark : darken($danger-color, 35%);
+$danger-color: #d63649; // ROJO
+$danger-dark: darken($danger-color, 35%);
 $danger-light: #fae2e5;
 
-$warning-color: #F7C137; // AMARILLO
-$warning-dark : #968007;
+$warning-color: #f7c137; // AMARILLO
+$warning-dark: #968007;
 $warning-light: #fef6e2;
 
-$success-color: #33AC2E; //VERDE
-$success-dark : darken($success-color, 35%);
+$success-color: #33ac2e; //VERDE
+$success-dark: darken($success-color, 35%);
 $success-light: #e1f4e0;
 
-$border-color: #E4E8F0; // GRIS CLARO (mas oscuro que el fondo)
+$border-color: #e4e8f0; // GRIS CLARO (mas oscuro que el fondo)
 
-$text-color: #2E384D; //GRIS texto
+$text-color: #2e384d; //GRIS texto
 $text-color-dark: #8e9091; //GRIS titulos
-$text-color-light: #B0BAC9; //GRIS label
-$text-color-menu: #8798AD; //GRIS
+$text-color-light: #b0bac9; //GRIS label
+$text-color-menu: #8798ad; //GRIS
 $light-hover-color: #eff9ff; //GRIS
-$disabled-color: #F9FAFF; //GRIS
-$disabled-border-color: #E0E7FF; //GRIS
+$disabled-color: #f9faff; //GRIS
+$disabled-border-color: #e0e7ff; //GRIS
 
-$bg-color: #F4F6FC; // GRIS
-$neutral-color: #FFF; // BLANCO
+$bg-color: #f4f6fc; // GRIS
+$neutral-color: #fff; // BLANCO
 
 $large-size: 1441px;
 $medium-size: 1023px;
@@ -42,11 +42,10 @@ $small-size: 425px;
 $header-size: 64px;
 $sidebar-size: 216px;
 
-$light-font: 'latolight', Arial, sans-serif;
-$primary-font: 'latoregular', Arial, sans-serif;
-$bold-font: 'latobold', Arial, sans-serif;
+$light-font: "latolight", Arial, sans-serif;
+$primary-font: "latoregular", Arial, sans-serif;
+$bold-font: "latobold", Arial, sans-serif;
 
-$second-font: 'latoregular', Arial, sans-serif;
+$second-font: "latoregular", Arial, sans-serif;
 
 $gap: 16px;
-
