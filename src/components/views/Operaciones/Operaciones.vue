@@ -1,6 +1,5 @@
 <template>
   <iframe
-    class="iiframe"
     :src="`${orders}#/?token=${token}`"
     frameborder="0"
     width="100%"
@@ -27,7 +26,7 @@ export default {
     };
   },
   created() {
-    this.token = localStorage.getItem("vue-token");
+    this.token = localStorage.getItem("vue-token-home");
     // console.log(this.token);
   },
 };
