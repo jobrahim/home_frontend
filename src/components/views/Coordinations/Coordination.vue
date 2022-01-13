@@ -3,7 +3,7 @@
     :src="`${coordination}?token=${token}`"
     frameborder="0"
     width="100%"
-    height="1300rem"
+    height="1350rem"
     scrolling="no"
   ></iframe>
 </template>
