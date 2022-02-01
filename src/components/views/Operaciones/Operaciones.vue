@@ -1,6 +1,6 @@
 <template>
   <iframe
-    :src="`${orders}#/?token=${token}`"
+    :src="`${orders}`"
     frameborder="0"
     width="100%"
     height="1300rem"
