@@ -3,7 +3,7 @@
     :src="`${orders}`"
     frameborder="0"
     width="100%"
-    height="1300rem"
+    height="1000 %"
     scrolling="no"
   ></iframe>
 </template>
