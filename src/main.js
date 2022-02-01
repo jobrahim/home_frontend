@@ -50,7 +50,7 @@ keycloak.onTokenExpired = function () {
 
 
 
-keycloak.init({ onLoad: 'login-required', checkLoginIframe: true }).then((auth) => {
+keycloak.init({ onLoad: 'login-required', checkLoginIframe: false }).then((auth) => {
     console.log("auth", auth)
 
     if (!auth) {
