@@ -1,9 +1,10 @@
 <template>
   <iframe
-    :src="`${coordination}`"
+    :src="`${coordination}#/?token`"
     frameborder="0"
+    class="iframe"
     width="100%"
-    height="1120 %"
+    height="1170 %"
     display="flex"
     scrolling="no"
   ></iframe>
@@ -26,7 +27,7 @@ export default {
     };
   },
   created() {
-    this.token = localStorage.getItem("vue-token-home");
+    // this.token = localStorage.getItem("vue-token-home");
     console.log(this.token);
     console.log(this.coordination);
   },

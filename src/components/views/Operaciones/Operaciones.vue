@@ -1,11 +1,12 @@
 <template>
   <iframe
-    :src="`${orders}`"
+    :src="`${orders}#/?token`"
     frameborder="0"
     width="100%"
-    height="1000 %"
+    height="1170 %"
     scrolling="no"
   ></iframe>
+  <!-- :src="`${orders}#/?token=${token}`" -->
 </template>
 
 
@@ -26,7 +27,7 @@ export default {
     };
   },
   created() {
-    this.token = localStorage.getItem("vue-token-home");
+    // this.token = localStorage.getItem("vue-token");
     // console.log(this.token);
   },
 };
