@@ -18,7 +18,6 @@ import VueTranslate from 'vue-translate-plugin';
 
 
 
-
 let initOptions = {
     url: process.env.VUE_APP_KEYCLOAK_URL,
     realm: process.env.VUE_APP_KEYCLOAK_REALM,
@@ -50,6 +49,8 @@ keycloak.onTokenExpired = function () {
 
 
 
+
+
 keycloak.init({ onLoad: 'login-required', checkLoginIframe: false }).then((auth) => {
     console.log("auth", auth)
 
@@ -64,6 +65,8 @@ keycloak.init({ onLoad: 'login-required', checkLoginIframe: false }).then((auth)
     setInterval(() => {
         refreshToken();
     }, 60000)
+
+    // created(){}
 
     createApp(App).use(router).mount('#app')
 
