@@ -1,18 +1,12 @@
 <template>
-  <iframe
-    :src="`${orders}#/?token`"
-    frameborder="0"
-    width="100%"
-    height="1500 %"
-    scrolling="no"
-  ></iframe>
-  <!-- :src="`${orders}#/?token=${token}`" -->
+  <div class="embed-container">
+    <iframe
+      :src="`${orders}#/?token`"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
 </template>
-
-
-
-
-
 <script>
 import loader from "../../shared/LoaderComponent.vue";
 import { ORDERS_URL } from "../../../utils/Constants";
@@ -28,18 +22,9 @@ export default {
   },
   created() {
     // this.token = localStorage.getItem("vue-token");
-    // console.log(this.token);
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  }
 };
 </script>
-<style scoped>
-.loader-div {
-  margin-top: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* .iiframe {
-  background-color: #f4f6fc;
-} */
-</style>

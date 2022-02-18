@@ -47,7 +47,42 @@
 }
 
 
-@media screen and (max-width: $medium-size) {
+// container iframe resposive
+.embed-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 90%;
+  position: relative;
+}
+
+.embed-container iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: $xx-large-size) {
+	// 
+}
+
+@media (min-width: $x-large-size) and (max-width: ($xx-large-size - 1px)) {
+	.embed-container {
+		padding-bottom: 68%;
+	}
+}
+
+@media (min-width: $large-size) and (max-width: ($x-large-size - 1px)) {
+	.embed-container {
+		padding-bottom: 80%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.embed-container {
+		padding-bottom: 60%;
+	}
 	.stats-dates-selectors {
 	    margin-top: 0px;
 	    text-align: left;
@@ -63,15 +98,15 @@
 	}
 }
 
-@media screen and (max-width: $small-size) {
+@media (max-width: $small-size) {
 	.stats-dates-selectors {
 		.control-label {
-    		min-width: 24px;
+			min-width: 24px;
 		}
 
-	    .datetime-component {
-		    max-width: 150px;
-    		margin-bottom: 8px;
+		.datetime-component {
+			max-width: 150px;
+			margin-bottom: 8px;
 		}
 
 		.br {

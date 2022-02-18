@@ -1,13 +1,12 @@
 <template>
-  <iframe
-    :src="`${coordination}#/?token`"
-    frameborder="0"
-    class="iframe"
-    width="100%"
-    height="1170 %"
-    display="flex"
-    scrolling="no"
-  ></iframe>
+  <div class="embed-container">
+    <iframe
+      :src="`${coordination}#/?token`"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+  
 </template>
 
 <script>
@@ -31,13 +30,8 @@ export default {
     console.log(this.token);
     console.log(this.coordination);
   },
+  mounted() {
+    window.scrollTo(0, 0);
+  }
 };
 </script>
-<style scoped>
-.loader-div {
-  /* margin-top: 300px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
