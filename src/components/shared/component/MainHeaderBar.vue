@@ -19,12 +19,7 @@
               width="32"
               height="32"
             />
-            <button @click="logout">LOGOUT</button>
-
-            <!-- <user-dropdown
-							v-if="user"
-							:user="user"
-						></user-dropdown> -->
+            <button @click="Userlogout">LOGOUT</button>
           </div>
         </div>
       </div>
@@ -33,8 +28,7 @@
 </template>
 
 <script>
-// import { NotificationServices } from '../services/NotificationServices';
-
+import * as Keycloak from "keycloak-js";
 export default {
   props: {
     openNav: null,
@@ -48,23 +42,10 @@ export default {
     };
   },
 
-  // created() {
-  // 	this.getNotifications();
-  // 	setInterval(() => {
-  // 		this.getNotifications();
-  // 	}, 5000);
-  // },
-
   methods: {
-    logout() {},
-    // getNotifications() {
-    // 	if( this.user ) {
-    // 		this.notificationServices.index(1).then(notifications => this.notifications = notifications.data);
-    // 	}
-    // },
-    // readNotification(notification) {
-    // 	this.notificationServices.read(notification);
-    // },
+    Userlogout() {
+      this.$keycloak.logout();
+    },
   },
 };
 </script>
