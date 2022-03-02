@@ -10,10 +10,15 @@
 
 			.avatar {
 				position: static;
+				&:hover {
+		    		color: pink;
+		    	}
 			}
 		}
     }
-
+	.notificacionIcono{
+		margin:5px
+	}
     .user-dropdown-list{
 		background-color: $neutral-color;
 		border-radius: 3px;
@@ -25,11 +30,11 @@
 	    position: absolute;
 	    right: 0px;
 	    top: 100%;
+
 		
 	    li {
 	    	list-style: none;
 		    border-bottom: 1px solid $border-color;
-
 		    &:last-of-type {
 		    	border-bottom: none;
 		    }
@@ -41,9 +46,7 @@
 		    	padding: 10px 0px;
 		    	transition: all 0.3s;
 
-		    	&:hover {
-		    		color: $primary-dark;
-		    	}
+		    
 		    }
 	    }
     }

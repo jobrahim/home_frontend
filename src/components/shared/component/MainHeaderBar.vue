@@ -12,10 +12,13 @@
         </div>
         <div class="user-dropdown 
         col-xl-5 text-right"
-         @mouseleave="showDropdown = false" @click="showDropdown = !showDropdown">         
-          <div class="float-right clear">
-            <i class="icon icon-bell-two"></i>
+          @mouseover="hover = true"
+          @mouseleave="hover = false"
+        >         
+          <div class=" float-right clear">
+            <i class=" notificacionIcono icon icon-bell-two"></i>
             <img
+            class="avatarLogo"
               src="../../../assets/default-avatar.jpg"
               :alt="name"
               width="32"
@@ -24,7 +27,7 @@
             <!-- <button @click="Userlogout">LOGOUT</button> -->
           </div>
           <transition name="slide-down-fade">
-			<div class="user-dropdown-list" v-if="showDropdown">
+			<div class="avatar user-dropdown-list" v-if="hover">
 				<ul>
 					<li>
 						<a @click="Userlogout">
@@ -52,7 +55,7 @@ export default {
   data() {
     return {
       notifications: null,
-      showDropdown: false,
+      hover: false,
     };
   },
 
