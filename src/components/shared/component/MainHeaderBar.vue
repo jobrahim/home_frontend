@@ -10,7 +10,9 @@
             <img alt="ITL Track" src="../../../assets/Logo-ITL.jpg" />
           </h1>
         </div>
-        <div class="col-xl-5 text-right">
+        <div class="user-dropdown 
+        col-xl-5 text-right"
+         @mouseleave="showDropdown = false" @click="showDropdown = !showDropdown">         
           <div class="float-right clear">
             <i class="icon icon-bell-two"></i>
             <img
@@ -19,8 +21,19 @@
               width="32"
               height="32"
             />
-            <button @click="Userlogout">LOGOUT</button>
+            <!-- <button @click="Userlogout">LOGOUT</button> -->
           </div>
+          <transition name="slide-down-fade">
+			<div class="user-dropdown-list" v-if="showDropdown">
+				<ul>
+					<li>
+						<a @click="Userlogout">
+							Cerrar Sesión
+						</a>
+					</li>
+				</ul>
+			</div>
+		</transition>
         </div>
       </div>
     </div>
@@ -39,6 +52,7 @@ export default {
   data() {
     return {
       notifications: null,
+      showDropdown: false,
     };
   },
 
@@ -49,5 +63,8 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+    @import '../../../sass/components/user-dropdown.scss'; 
+</style>
 
 
