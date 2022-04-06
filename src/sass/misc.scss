@@ -1,15 +1,19 @@
+body {
+	background-color: #F4F6FC;
+}
+
 .hidden-btn {
 	height: 0;
 	overflow-y: hidden;
 	transition: all 0.3s;
 
 	&.show {
-		height: 75px;	
+		height: 75px;
 	}
 }
 
 .stats-dates-selectors {
-    margin-top: 20px;
+	margin-top: 20px;
 
 	.control-label {
 		margin-left: 8px;
@@ -27,7 +31,7 @@
 
 .incomplete-registration {
 	text-align: center;
-    padding-top: 100px;
+	padding-top: 100px;
 
 	h2 {
 		margin: 16px 0px;
@@ -35,57 +39,55 @@
 	}
 }
 
-
 .dni-thumbnail {
-    display: block;
-    width: 100%;
+	display: block;
+	width: 100%;
 
-    img {
+	img {
 		width: 100%;
-		max-width: auto;    	
-    }
+		max-width: auto;
+	}
 }
-
 
 // container iframe resposive
 .embed-container {
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 90%;
-  position: relative;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 60%;
+	position: relative;
 }
 
 .embed-container iframe {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 @media (min-width: $xx-large-size) {
-	// 
+	//
 }
 
 @media (min-width: $x-large-size) and (max-width: ($xx-large-size - 1px)) {
 	.embed-container {
-		padding-bottom: 68%;
+		padding-bottom: 76%;
 	}
 }
 
 @media (min-width: $large-size) and (max-width: ($x-large-size - 1px)) {
 	.embed-container {
-		padding-bottom: 80%;
+		padding-bottom: 92%;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: $medium-size) and (max-width: ($large-size - 1px)) {
 	.embed-container {
-		padding-bottom: 60%;
+		padding-bottom: 90%;
 	}
 	.stats-dates-selectors {
-	    margin-top: 0px;
-	    text-align: left;
+		margin-top: 0px;
+		text-align: left;
 
 		.control-label {
 			margin-left: 0;
@@ -112,10 +114,8 @@
 		.br {
 			display: block;
 		}
-
 	}
 }
-
 
 .only-print {
 	display: none;
@@ -127,7 +127,7 @@
 	}
 
 	@page {
-    	size: A4 landscape;
+		size: A4 landscape;
 		margin-left: 0px;
 		margin-right: 0px;
 		margin-top: 0px;
@@ -139,10 +139,9 @@
 	.only-print {
 		display: initial;
 	}
-    .print-hidden {
-        display: none;
-    }
-
+	.print-hidden {
+		display: none;
+	}
 
 	#mainHeader {
 		display: none;
@@ -157,13 +156,13 @@
 		padding: 0 !important;
 	}
 	.table table th {
-    	white-space: initial;	
+		white-space: initial;
 	}
 	.table table td {
-    	white-space: initial;
+		white-space: initial;
 	}
 
 	.evolution-of-operations-col {
-    	grid-column: span 12;
+		grid-column: span 12;
 	}
 }
